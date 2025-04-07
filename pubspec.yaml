@@ -1,0 +1,25 @@
+name: consumo_app_2
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  mqtt_client: ^10.0.0   # Para conectar con el broker MQTT
+  sqflite: ^2.3.0        # Para manejar la base de datos SQLite localmente
+  path_provider: ^2.1.1  # Para obtener la ruta de la base de datos
+  fl_chart: ^0.65.0      # Para graficar el consumo de corriente
+  http: ^0.13.6        # Para hacer peticiones HTTP a la API REST
+  provider: ^6.0.5       # Para manejar el estado de la aplicación
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
