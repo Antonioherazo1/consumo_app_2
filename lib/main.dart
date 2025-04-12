@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'screens/home_screen.dart';
+import 'screens/graph_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Consumo de Energía',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: const HomeScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const HomeScreen(),
+        '/graph': (context) => const GraphScreen(),
+      },
     );
   }
 }

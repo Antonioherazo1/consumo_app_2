@@ -30,11 +30,23 @@ class _HomeScreenState extends State<HomeScreen> {
         title: const Text('Consumo de Energía'),
         centerTitle: true,
       ),
-      body: Center(
-        child: Text(
-          'Amperaje Actual: ${_amperajeActual.toStringAsFixed(2)} A',
-          style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: Text(
+              'Amperaje Actual: ${_amperajeActual.toStringAsFixed(2)} A',
+              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+          ),
+          const SizedBox(height: 30),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/graph');
+            },
+            child: const Text("Ver Gráfica de Consumo"),
+          ),
+        ],
       ),
     );
   }

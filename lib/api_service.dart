@@ -25,10 +25,15 @@ class Consumo {
 }
 
 class ApiService {
-  static const String baseUrl = "http://54.207.201.160/:5000";
+  static const String baseUrl = "http://54.207.201.160:5000";
 
-  static Future<List<Consumo>> obtenerConsumo() async {
-    final response = await http.get(Uri.parse('$baseUrl/consumo'));
+  static Future<List<Consumo>> obtenerConsumo({
+    int offset = 0,
+    int limit = 50,
+  }) async {
+    final response = await http.get(
+      Uri.parse('$baseUrl/consumo?offset=$offset&limit=$limit'),
+    );
 
     if (response.statusCode == 200) {
       final List<dynamic> data = json.decode(response.body);

@@ -15,6 +15,7 @@ dependencies:
   fl_chart: ^0.65.0      # Para graficar el consumo de corriente
   http: ^0.13.6        # Para hacer peticiones HTTP a la API REST
   provider: ^6.0.5       # Para manejar el estado de la aplicación
+  intl: ^0.18.1  
 
 dev_dependencies:
   flutter_test:
